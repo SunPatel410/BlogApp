@@ -1,0 +1,15 @@
+C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\BA.Domains.Tests.dll
+C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\BA.Domains.Tests.pdb
+C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\BA.Domains.dll
+C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\FluentAssertions.Core.dll
+C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\FluentAssertions.dll
+C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\nunit.framework.dll
+C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\BA.Domains.pdb
+C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\FluentAssertions.pdb
+C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\FluentAssertions.xml
+C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\FluentAssertions.Core.pdb
+C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\FluentAssertions.Core.xml
+C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\nunit.framework.xml
+C:\Dev\BlogApp\BA.Domains.Tests\obj\Debug\BA.Domains.Tests.csprojResolveAssemblyReference.cache
+C:\Dev\BlogApp\BA.Domains.Tests\obj\Debug\BA.Domains.Tests.dll
+C:\Dev\BlogApp\BA.Domains.Tests\obj\Debug\BA.Domains.Tests.pdb
