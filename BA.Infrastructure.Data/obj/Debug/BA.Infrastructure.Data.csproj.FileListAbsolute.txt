@@ -17,8 +17,8 @@ C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Ninject.Extensions.Conventions.x
 C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Ninject.Web.Common.xml
 C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.csprojResolveAssemblyReference.cache
 C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.Migrations.InitialTables.resources
+C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.Migrations.changedDbEntites.resources
+C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.Migrations.updatedEntities.resources
 C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.csproj.GenerateResource.Cache
 C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.dll
 C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.pdb
-C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.Migrations.changedDbEntites.resources
-C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.Migrations.updatedEntities.resources

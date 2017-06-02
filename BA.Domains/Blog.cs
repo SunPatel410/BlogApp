@@ -4,9 +4,8 @@ using System.Linq;
 
 namespace BA.Domains
 {
-    public class Blog
+    public class Blog : TEntity
     {
-        public int Id { get; private set; }
         public User User { get; private set; }
         public string Title { get; private set; }
         public Category Category { get; private set; }

@@ -4,9 +4,8 @@ using System.Linq;
 
 namespace BA.Domains
 {
-    public class Comment
+    public class Comment : TEntity
     {
-        public int Id { get; private set; }
         public User User { get; private set; }
         public string CommentDescription { get; private set; }
         public IList<Like> Likes { get; }

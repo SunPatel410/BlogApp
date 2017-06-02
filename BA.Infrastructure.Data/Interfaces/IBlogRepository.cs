@@ -5,6 +5,6 @@ namespace BA.Infrastructure.Data.Interfaces
 {
     public interface IBlogRepository: IRepository<Blog>
     {
-        //IList<Blog> SearchBlogsByTheNameOfCurrentPresidentOfUSA(string name);
+        
     }
 }

@@ -1,41 +1,42 @@
-﻿using System;
+﻿using BA.Domains;
+using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
 namespace BA.Infrastructure.Data.Interfaces.Helpers
 {
-    public interface IRepository<TEntity> where TEntity : class
+    public interface IRepository<T> where T : TEntity
     {
         /// <summary>
         /// Gets an entity based on the ID
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        TEntity Get(int id);
+        T Get(int id);
 
         /// <summary>
         /// Gets all the possible entities
         /// </summary>
         /// <returns></returns>
-        IEnumerable<TEntity> Get();
+        IEnumerable<T> Get();
 
         /// <summary>
         /// Gets specific entities limited by Lambda query
         /// </summary>
         /// <param name="predicate"></param>
         /// <returns></returns>
-        IEnumerable<TEntity> Get(Expression<Func<TEntity, bool>> predicate);
+        IEnumerable<T> Get(Expression<Func<T, bool>> predicate);
 
         /// <summary>
         /// Adds new entity to the database
         /// </summary>
         /// <param name="entity"></param>
-        void Add(TEntity entity);
+        void Add(T entity);
 
         /// <summary>
         /// Removes entity from the database
         /// </summary>
         /// <param name="entity"></param>
-        void Remove(TEntity entity);
+        void Remove(T entity);
     }
 }

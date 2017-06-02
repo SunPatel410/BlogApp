@@ -2,9 +2,8 @@
 
 namespace BA.Domains
 {
-    public class Category
+    public class Category : TEntity
     {
-        public int Id { get; private set; }
         public string Name { get; private set; }
         public string CategoryDescription { get; private set; }
 

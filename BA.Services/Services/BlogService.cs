@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BA.Domains;
+using BA.Infrastructure.Data.Interfaces;
 using BA.Infrastructure.Data.Interfaces.Helpers;
 using BA.Services.Dtos;
 using BA.Services.Interfaces;
@@ -12,10 +13,10 @@ namespace BA.Services.Services
 {
     public class BlogService : IBlogService
     {
-        private readonly IRepository<Blog> _blogRepository;
+        private readonly IBlogRepository _blogRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public BlogService(IRepository<Blog> blogRepository, IUnitOfWork unitOfWork)
+        public BlogService(IBlogRepository blogRepository, IUnitOfWork unitOfWork)
         {
             _blogRepository = blogRepository;
             _unitOfWork = unitOfWork;
@@ -24,8 +25,7 @@ namespace BA.Services.Services
 
         public BlogDto Get(int blogId)
         {
-            var blog = _blogRepository.Get(x => x.Id == blogId).FirstOrDefault();
-
+            var blog = _blogRepository.Get(blogId);
             return Mapper.Map<BlogDto>(blog);
         }
 
@@ -61,23 +61,45 @@ namespace BA.Services.Services
         public void RemoveComment(Request<CommentDto> request)
         {
             var comment = _blogRepository.Get(x => x.Id == request.EntityId).FirstOrDefault();
-            
-            //_blogRepository.Remove()
+
+            _blogRepository.Remove(comment);
+
+            _unitOfWork.Complete();
         }
 
-        public void AddLike(Request<LikeDto> like)
+        public void AddLike(Request<LikeDto> request)
         {
-            throw new System.NotImplementedException();
+            var blog = _blogRepository.Get(x => x.Id == request.EntityId).FirstOrDefault();
+
+            if (blog == null)
+                throw new ArgumentNullException(nameof(blog));
+
+            var like = Mapper.Map<Like>(request.Details);
+
+            blog.AddLike(like);
+
+            _unitOfWork.Complete();
         }
 
-        public void RemoveLike(Request<LikeDto> like)
+        public void RemoveLike(Request<LikeDto> request)
         {
-            throw new System.NotImplementedException();
+            var blog = _blogRepository.Get(x => x.Id == request.EntityId).FirstOrDefault();
+
+            if (blog == null)
+                throw new ArgumentNullException(nameof(blog));
+
+            var like = Mapper.Map<Like>(request.Details);
+
+            blog.RemoveLike(like);
+
+            _unitOfWork.Complete();
         }
 
         public IEnumerable<BlogDto> Search(string query)
         {
-            throw new System.NotImplementedException();
+            var search = _blogRepository.Get(x => x.Title == query);
+
+            return Mapper.Map<IEnumerable<BlogDto>>(search);
         }
 
         public IEnumerable<BlogDetailsDto> GetBlogList()

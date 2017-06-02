@@ -11,8 +11,8 @@ namespace BA.Services.Interfaces
         void Edit(BlogDto blogDto);
         void AddComment(Request<CommentDto> request);
         void RemoveComment(Request<CommentDto> request);
-        void AddLike(Request<LikeDto> likeDto);
-        void RemoveLike(Request<LikeDto> likeDto);
+        void AddLike(Request<LikeDto> request);
+        void RemoveLike(Request<LikeDto> request);
         IEnumerable<BlogDto> Search(string query);
         IEnumerable<BlogDetailsDto> GetBlogList();
 

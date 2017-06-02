@@ -1,4 +1,5 @@
-﻿using BA.Infrastructure.Data.Context;
+﻿using BA.Domains;
+using BA.Infrastructure.Data.Context;
 using BA.Infrastructure.Data.Interfaces.Helpers;
 using System;
 using System.Collections.Generic;
@@ -8,36 +9,36 @@ using System.Linq.Expressions;
 
 namespace BA.Infrastructure.Data.Repositories.Helpers
 {
-    public abstract class Repository<TEntity> : IRepository<TEntity> where TEntity : class
+    public abstract class Repository<T> : IRepository<T> where T : TEntity
     {
-        private readonly IDbSet<TEntity> _set;
+        private readonly IDbSet<T> _set;
 
         protected Repository(BlogDbContext context)
         {
-            _set = context.Set<TEntity>();
+            _set = context.Set<T>();
         }
 
-        public TEntity Get(int id)
+        public T Get(int id)
         {
-            return _set.Find(id);
+            return _set.FirstOrDefault(p => p.Id == id);
         }
 
-        public IEnumerable<TEntity> Get()
+        public IEnumerable<T> Get()
         {
             return _set.AsNoTracking().ToList();
         }
 
-        public IEnumerable<TEntity> Get(Expression<Func<TEntity, bool>> predicate)
+        public IEnumerable<T> Get(Expression<Func<T, bool>> predicate)
         {
             return _set.AsNoTracking().Where(predicate);
         }
 
-        public void Add(TEntity entity)
+        public void Add(T entity)
         {
             _set.Add(entity);
         }
 
-        public void Remove(TEntity entity)
+        public void Remove(T entity)
         {
             _set.Remove(entity);
         }

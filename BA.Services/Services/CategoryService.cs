@@ -36,7 +36,8 @@ namespace BA.Services.Services
 
         public void RemoveCategory(CategoryDto categoryDto)
         {
-            var category = Mapper.Map<Category>(categoryDto);
+            // category = Mapper.Map<Category>(categoryDto);
+            var category = _categoryRepository.Get(categoryDto.Id);
 
             _categoryRepository.Remove(category);
 
