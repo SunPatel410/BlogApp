@@ -4,6 +4,7 @@ using BA.Infrastructure.Data.Interfaces.Helpers;
 using BA.Services.Dtos;
 using BA.Services.Interfaces;
 using BA.Services.Requests;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -28,24 +29,40 @@ namespace BA.Services.Services
             return Mapper.Map<BlogDto>(blog);
         }
 
-        public void Create(BlogDto blog)
+        public void Create(BlogDto blogDto)
         {
-            throw new System.NotImplementedException();
+            var blog = Mapper.Map<Blog>(blogDto);
+
+            _blogRepository.Add(blog);
+            _unitOfWork.Complete();
         }
 
-        public void Edit(BlogDto blog)
+        public void Edit(BlogDto blogDto)
         {
-            throw new System.NotImplementedException();
+            var blog = _blogRepository.Get(blogDto.Id);
+
+            blog.Update(blog.Title, blog.Description, blog.Category);
+            _unitOfWork.Complete();
         }
 
         public void AddComment(Request<CommentDto> request)
         {
-            throw new System.NotImplementedException();
+            var comment = _blogRepository.Get(x => x.Id == request.EntityId).FirstOrDefault();
+
+            if (comment == null)
+                throw new ArgumentNullException(nameof(comment));
+
+            var commentDto = Mapper.Map<Comment>(request.Details);
+
+            comment.AddComment(commentDto);
+            _unitOfWork.Complete();
         }
 
         public void RemoveComment(Request<CommentDto> request)
         {
-            throw new System.NotImplementedException();
+            var comment = _blogRepository.Get(x => x.Id == request.EntityId).FirstOrDefault();
+            
+            //_blogRepository.Remove()
         }
 
         public void AddLike(Request<LikeDto> like)
@@ -63,13 +80,11 @@ namespace BA.Services.Services
             throw new System.NotImplementedException();
         }
 
-        public IEnumerable<BlogDto> GetBlogList()
+        public IEnumerable<BlogDetailsDto> GetBlogList()
         {
             var blogs = _blogRepository.Get();
 
-            //? add a new blog dto just for details with no like or comments ? 
-
-            throw new System.NotImplementedException();
+            return Mapper.Map<IEnumerable<BlogDetailsDto>>(blogs);
         }
     }
 }

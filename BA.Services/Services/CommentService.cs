@@ -34,8 +34,8 @@ namespace BA.Services.Services
 
             if (comment == null)
                 throw new ArgumentNullException(nameof(comment));
-
-            var like = Mapper.Map<Like>(request);
+            
+            var like = Mapper.Map<Like>(request.Details);
 
             comment.AddLike(like);
 
@@ -50,7 +50,7 @@ namespace BA.Services.Services
             if (comment == null)
                 throw new ArgumentNullException(nameof(comment));
 
-            var like = Mapper.Map<Like>(request);
+            var like = Mapper.Map<Like>(request.Details);
 
             comment.RemoveLike(like);
 

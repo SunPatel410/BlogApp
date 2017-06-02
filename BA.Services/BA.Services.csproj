@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoMapper\DomainToDTO.cs" />
+    <Compile Include="Dtos\BlogDetailsDto.cs" />
     <Compile Include="Dtos\BlogDto.cs" />
     <Compile Include="Dtos\CategoryDto.cs" />
     <Compile Include="Dtos\CommentDto.cs" />
