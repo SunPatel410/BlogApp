@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BA.Domains;
+using BA.Infrastructure.Data.Interfaces;
 using BA.Infrastructure.Data.Interfaces.Helpers;
 using BA.Services.Dtos;
 using BA.Services.Interfaces;
@@ -9,10 +10,10 @@ namespace BA.Services.Services
 {
     public class CategoryService : ICategoryService
     {
-        private readonly IRepository<Category> _categoryRepository;
+        private readonly ICategoryRepository _categoryRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public CategoryService(IRepository<Category> categoryRepository, IUnitOfWork unitOfWork)
+        public CategoryService(ICategoryRepository categoryRepository, IUnitOfWork unitOfWork)
         {
             _categoryRepository = categoryRepository;
             _unitOfWork = unitOfWork;
@@ -36,7 +37,6 @@ namespace BA.Services.Services
 
         public void RemoveCategory(CategoryDto categoryDto)
         {
-            // category = Mapper.Map<Category>(categoryDto);
             var category = _categoryRepository.Get(categoryDto.Id);
 
             _categoryRepository.Remove(category);

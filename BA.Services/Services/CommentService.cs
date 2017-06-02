@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BA.Domains;
+using BA.Infrastructure.Data.Interfaces;
 using BA.Infrastructure.Data.Interfaces.Helpers;
 using BA.Services.Dtos;
 using BA.Services.Interfaces;
@@ -11,10 +12,10 @@ namespace BA.Services.Services
 {
     public class CommentService : ICommentService
     {
-        private readonly IRepository<Comment> _commentRepository;
+        private readonly ICommentRepository _commentRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public CommentService(IRepository<Comment> commentRepository, IUnitOfWork unitOfWork)
+        public CommentService(ICommentRepository commentRepository, IUnitOfWork unitOfWork)
         {
             _commentRepository = commentRepository;
             _unitOfWork = unitOfWork;

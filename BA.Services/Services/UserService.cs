@@ -32,7 +32,6 @@ namespace BA.Services.Services
 
         public void AddUser(UserDto userDto)
         {
-            //do a check for exisiting users.
             var user = Mapper.Map<User>(userDto);
 
             _userRepository.Add(user);
