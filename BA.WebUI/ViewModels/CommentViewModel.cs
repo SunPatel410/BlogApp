@@ -1,16 +1,18 @@
-﻿using BA.Domains;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace BA.WebUI.ViewModels
 {
     public class CommentViewModel
     {
-        public string CommentDescription { get;  set; }
-        public IList<Like> Likes { get; set; }
+        [Key]
+        public int Id { get; set; }
 
-        public CommentViewModel()
-        {
-            Likes = new List<Like>();
-        }
+        [Required(ErrorMessage = "Please Enter Name")]
+        [MaxLength(20, ErrorMessage = "Max {0} characters")]
+        public string Name { get; set; }
+
+        [Required(ErrorMessage = "Please Enter Comment Description")]
+        [MaxLength(100, ErrorMessage = "Max {0} characters")]
+        public string CommentDescription { get;  set; }
     }
 }

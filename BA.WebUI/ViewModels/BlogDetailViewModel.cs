@@ -1,10 +1,9 @@
 ﻿using BA.Domains;
 using System;
-using System.Collections.Generic;
 
 namespace BA.WebUI.ViewModels
 {
-    public class BlogViewModel
+    public class BlogDetailViewModel
     {
         public int Id { get; set; }
         public string UserName { get; set; }
@@ -12,7 +11,6 @@ namespace BA.WebUI.ViewModels
         public Category Category { get;  set; }
         public string Description { get;  set; }
         public DateTime PostedDate { get;  set; }
-        public IList<Comment> Comments { get;  set; }
         public int Likes { get; set; }
     }
 }

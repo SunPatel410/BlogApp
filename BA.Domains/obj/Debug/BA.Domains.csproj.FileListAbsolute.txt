@@ -2,3 +2,4 @@ C:\Dev\BlogApp\BA.Domains\bin\Debug\BA.Domains.dll
 C:\Dev\BlogApp\BA.Domains\bin\Debug\BA.Domains.pdb
 C:\Dev\BlogApp\BA.Domains\obj\Debug\BA.Domains.dll
 C:\Dev\BlogApp\BA.Domains\obj\Debug\BA.Domains.pdb
+C:\Dev\BlogApp\BA.Domains\obj\Debug\BA.Domains.csprojResolveAssemblyReference.cache

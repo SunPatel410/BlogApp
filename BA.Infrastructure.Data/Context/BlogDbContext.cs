@@ -18,6 +18,11 @@ namespace BA.Infrastructure.Data.Context
             Configuration.AutoDetectChangesEnabled = false;
         }
 
+        public static BlogDbContext Create()
+        {
+            return new BlogDbContext();
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new BlogMap());

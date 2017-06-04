@@ -8,8 +8,8 @@ namespace BA.WebUI.AutoMapper
         {
             Mapper.Initialize(x =>
             {
-                x.AddProfile<DTOtoViewModelMapper>();
-                x.AddProfile<ViewModelToDTOMapper>();
+                x.AddProfile<DTOtoViewModelMapping>();
+                x.AddProfile<ViewModelToDTOMapping>();
             });
         }
     }
