@@ -13,3 +13,9 @@ C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\nunit.framework.xml
 C:\Dev\BlogApp\BA.Domains.Tests\obj\Debug\BA.Domains.Tests.csprojResolveAssemblyReference.cache
 C:\Dev\BlogApp\BA.Domains.Tests\obj\Debug\BA.Domains.Tests.dll
 C:\Dev\BlogApp\BA.Domains.Tests\obj\Debug\BA.Domains.Tests.pdb
+C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\EntityFramework.dll
+C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Dev\BlogApp\BA.Domains.Tests\bin\Debug\EntityFramework.xml

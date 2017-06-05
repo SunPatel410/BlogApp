@@ -12,7 +12,7 @@ namespace BA.Infrastructure.Data.Repositories.Helpers
         public IBlogRepository Blogs { get; }
         public ICategoryRepository Categories { get; }
         public ICommentRepository Comments { get; }
-        public IUserRepository Users { get; }
+        //public IUserRepository Users { get; }
 
 
         public UnitOfWork(BlogDbContext context)
@@ -21,7 +21,7 @@ namespace BA.Infrastructure.Data.Repositories.Helpers
             Blogs = new BlogRepository(_context);
             Categories = new CategoryRepository(_context);
             Comments = new CommentRepository(_context);
-            Users = new UserRepository(_context);
+            //Users = new UserRepository(_context);
         }
 
         public void Complete()

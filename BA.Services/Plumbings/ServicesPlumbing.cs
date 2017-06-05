@@ -10,7 +10,7 @@ namespace BA.Services.Plumbings
         {
             kernel.Bind<IBlogService>().To<BlogService>();
             kernel.Bind<ICategoryService>().To<CategoryService>();
-            kernel.Bind<IUserService>().To<UserService>();
+            //kernel.Bind<IUserService>().To<UserService>();
             kernel.Bind<ICommentService>().To<CommentService>();
 
             new Infrastructure.Data.Plumbings.DataPlumbings().Initialize(kernel);

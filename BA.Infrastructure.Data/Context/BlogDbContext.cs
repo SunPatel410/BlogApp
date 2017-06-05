@@ -1,16 +1,18 @@
 ﻿using BA.Domains;
 using BA.Infrastructure.Data.Mappings;
+using BA.WebUI.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
 
 namespace BA.Infrastructure.Data.Context
 {
-    public class BlogDbContext : DbContext
+    public class BlogDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Like> Likes { get; set; }
-        public DbSet<User> Users { get; set; }
+        //public DbSet<User> Users { get; set; }
 
         public BlogDbContext() : base("BlogDbContext")
         {

@@ -22,3 +22,8 @@ C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.Migration
 C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.csproj.GenerateResource.Cache
 C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.dll
 C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.pdb
+C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.Migrations.applicationUserTable.resources

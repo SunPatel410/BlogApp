@@ -12,7 +12,7 @@ namespace BA.Services.AutoMapper
             CreateMap<Category, CategoryDto>();
             CreateMap<Comment, CommentDto>();
             CreateMap<Like, LikeDto>();
-            CreateMap<User, UserDto>();
+            //CreateMap<User, UserDto>();
         }
     }
 }

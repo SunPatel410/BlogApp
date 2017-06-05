@@ -17,3 +17,7 @@ C:\Dev\BlogApp\BA.Services\bin\Debug\EntityFramework.xml
 C:\Dev\BlogApp\BA.Services\obj\Debug\BA.Services.csprojResolveAssemblyReference.cache
 C:\Dev\BlogApp\BA.Services\obj\Debug\BA.Services.dll
 C:\Dev\BlogApp\BA.Services\obj\Debug\BA.Services.pdb
+C:\Dev\BlogApp\BA.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Dev\BlogApp\BA.Services\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Dev\BlogApp\BA.Services\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Dev\BlogApp\BA.Services\bin\Debug\Microsoft.AspNet.Identity.Core.xml

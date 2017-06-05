@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using BA.Services.Dtos;
-using BA.WebUI.Models;
 using BA.WebUI.ViewModels;
 
 namespace BA.WebUI.AutoMapper
@@ -10,7 +9,7 @@ namespace BA.WebUI.AutoMapper
         public DTOtoViewModelMapping()
         {
             CreateMap<CommentDto, CommentViewModel>();
-            CreateMap<UserDto, ApplicationUser>();
+            //CreateMap<UserDto, ApplicationUser>();
             CreateMap<CategoryDto, CategoryViewModel>();
             CreateMap<CommentDto, CommentViewModel>();
             CreateMap<BlogDto, BlogViewModel>();
