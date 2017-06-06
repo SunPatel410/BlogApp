@@ -10,7 +10,8 @@ namespace BA.Infrastructure.Data.Mappings
             HasKey(b => b.Id);
 
             HasRequired(b => b.User)
-                .WithMany();
+                .WithMany()
+                .WillCascadeOnDelete(false);
 
             Property(b => b.Title)
                 .IsRequired()

@@ -4,6 +4,8 @@ C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\BA.Infrastructure.Data.pdb
 C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\BA.Domains.dll
 C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\EntityFramework.dll
 C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Microsoft.Web.Infrastructure.dll
 C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Ninject.dll
 C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Ninject.Extensions.Conventions.dll
@@ -12,6 +14,8 @@ C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\WebActivatorEx.dll
 C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\BA.Domains.pdb
 C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\EntityFramework.xml
 C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Ninject.xml
 C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Ninject.Extensions.Conventions.xml
 C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Ninject.Web.Common.xml
@@ -19,11 +23,8 @@ C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.csprojRes
 C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.Migrations.InitialTables.resources
 C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.Migrations.changedDbEntites.resources
 C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.Migrations.updatedEntities.resources
+C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.Migrations.applicationUserTable.resources
 C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.csproj.GenerateResource.Cache
 C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.dll
 C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.pdb
-C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
-C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
-C:\Dev\BlogApp\BA.Infrastructure.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.Migrations.applicationUserTable.resources
+C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.Migrations.changesToApplicationUser.resources

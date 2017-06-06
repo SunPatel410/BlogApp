@@ -6,7 +6,7 @@ namespace BA.Domains
 {
     public class Blog : TEntity
     {
-        public User User { get; private set; }
+        public ApplicationUser User { get; private set; }
         public string Title { get; private set; }
         public Category Category { get; private set; }
         public string Description { get; private set; }
@@ -20,7 +20,7 @@ namespace BA.Domains
             
         }
 
-        public Blog(User user, string title, Category category, string description)
+        public Blog(ApplicationUser user, string title, Category category, string description)
         {
             User = user;
             Title = title;

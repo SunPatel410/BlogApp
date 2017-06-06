@@ -6,7 +6,7 @@ namespace BA.Domains
 {
     public class Comment : TEntity
     {
-        public User User { get; private set; }
+        public ApplicationUser User { get; private set; }
         public string CommentDescription { get; private set; }
         public IList<Like> Likes { get; }
 
@@ -15,7 +15,7 @@ namespace BA.Domains
             Likes = new List<Like>();
         }
 
-        public Comment(User user, string comment) : this()
+        public Comment(ApplicationUser user, string comment) : this()
         {
             User = user;
             CommentDescription = comment;

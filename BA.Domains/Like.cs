@@ -2,14 +2,14 @@
 {
     public class Like : TEntity
     {
-        public User User { get; private set; }
+        public ApplicationUser User { get; private set; }
 
         public Like()
         {
             
         }
 
-        public Like(User user)
+        public Like(ApplicationUser user)
         {
             User = user;
         }

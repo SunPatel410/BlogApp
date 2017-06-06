@@ -1,4 +1,5 @@
-﻿using BA.WebUI.Models;
+﻿using BA.Domains;
+using BA.WebUI.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
@@ -150,9 +151,7 @@ namespace BA.WebUI.Controllers
             {
                 var user = new ApplicationUser { UserName = model.Email,
                     Email = model.Email,
-                    FirstName = model.FirstName,
-                    LastName = model.LastName
-                };
+                    Name = model.Name};
 
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)

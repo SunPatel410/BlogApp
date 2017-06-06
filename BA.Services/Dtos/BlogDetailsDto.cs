@@ -6,7 +6,7 @@ namespace BA.Services.Dtos
     public class BlogDetailsDto
     {
         public int Id { get; set; }
-        public string UserName { get; set; }
+        public ApplicationUser User { get; set; }
         public string Title { get; set; }
         public Category Category { get; set; }
         public string Description { get; set; }
@@ -17,10 +17,10 @@ namespace BA.Services.Dtos
             
         }
 
-        public BlogDetailsDto(int id, string userName, string title, Category category, string description)
+        public BlogDetailsDto(int id, ApplicationUser user, string title, Category category, string description)
         {
             Id = id;
-            UserName = userName;
+            User = user;
             Title = title;
             Category = category;
             Description = description;

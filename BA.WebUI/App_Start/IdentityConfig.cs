@@ -1,5 +1,5 @@
-﻿using BA.Infrastructure.Data.Context;
-using BA.WebUI.Models;
+﻿using BA.Domains;
+using BA.Infrastructure.Data.Context;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;

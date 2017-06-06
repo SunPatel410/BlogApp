@@ -106,6 +106,10 @@
     <Compile Include="Migrations\201706051105311_applicationUserTable.Designer.cs">
       <DependentUpon>201706051105311_applicationUserTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706061430012_changesToApplicationUser.cs" />
+    <Compile Include="Migrations\201706061430012_changesToApplicationUser.Designer.cs">
+      <DependentUpon>201706061430012_changesToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Plumbings\DataPlumbings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -138,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706051105311_applicationUserTable.resx">
       <DependentUpon>201706051105311_applicationUserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706061430012_changesToApplicationUser.resx">
+      <DependentUpon>201706061430012_changesToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

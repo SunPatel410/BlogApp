@@ -1,6 +1,5 @@
 ﻿using BA.Domains;
 using BA.Infrastructure.Data.Mappings;
-using BA.WebUI.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
 
@@ -31,7 +30,7 @@ namespace BA.Infrastructure.Data.Context
             modelBuilder.Configurations.Add(new CategoryMap());
             modelBuilder.Configurations.Add(new CommentMap());
             modelBuilder.Configurations.Add(new LikeMap());
-            modelBuilder.Configurations.Add(new UserMap());
+            //modelBuilder.Configurations.Add(new UserMap());
 
             base.OnModelCreating(modelBuilder);
         }

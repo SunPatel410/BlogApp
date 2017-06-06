@@ -7,7 +7,7 @@ namespace BA.Services.Dtos
     public class BlogDto
     {
         public int Id { get; set; }
-        public User User { get; set; }
+        public ApplicationUser User { get; set; }
         public string Title { get; set; }
         public Category Category { get; set; }
         public string Description { get; set; }
@@ -19,7 +19,7 @@ namespace BA.Services.Dtos
         {
         }
 
-        public BlogDto(int id, User user, string title, Category category, string description,
+        public BlogDto(int id, ApplicationUser user, string title, Category category, string description,
             IList<CommentDto> comments, IList<LikeDto> likes)
         {
             Id = id;

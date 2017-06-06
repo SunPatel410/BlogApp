@@ -16,6 +16,8 @@ C:\Dev\BlogApp\BA.WebUI\bin\BA.WebUI.dll
 C:\Dev\BlogApp\BA.WebUI\bin\BA.WebUI.pdb
 C:\Dev\BlogApp\BA.WebUI\bin\Antlr3.Runtime.dll
 C:\Dev\BlogApp\BA.WebUI\bin\AutoMapper.dll
+C:\Dev\BlogApp\BA.WebUI\bin\BA.Domains.dll
+C:\Dev\BlogApp\BA.WebUI\bin\BA.Infrastructure.Data.dll
 C:\Dev\BlogApp\BA.WebUI\bin\BA.Services.dll
 C:\Dev\BlogApp\BA.WebUI\bin\EntityFramework.dll
 C:\Dev\BlogApp\BA.WebUI\bin\EntityFramework.SqlServer.dll
@@ -54,8 +56,8 @@ C:\Dev\BlogApp\BA.WebUI\bin\System.Web.WebPages.dll
 C:\Dev\BlogApp\BA.WebUI\bin\System.Web.WebPages.Razor.dll
 C:\Dev\BlogApp\BA.WebUI\bin\WebActivatorEx.dll
 C:\Dev\BlogApp\BA.WebUI\bin\WebGrease.dll
-C:\Dev\BlogApp\BA.WebUI\bin\BA.Infrastructure.Data.dll
-C:\Dev\BlogApp\BA.WebUI\bin\BA.Domains.dll
+C:\Dev\BlogApp\BA.WebUI\bin\BA.Domains.pdb
+C:\Dev\BlogApp\BA.WebUI\bin\BA.Infrastructure.Data.pdb
 C:\Dev\BlogApp\BA.WebUI\bin\BA.Services.pdb
 C:\Dev\BlogApp\BA.WebUI\bin\AutoMapper.xml
 C:\Dev\BlogApp\BA.WebUI\bin\EntityFramework.xml
@@ -90,8 +92,6 @@ C:\Dev\BlogApp\BA.WebUI\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Dev\BlogApp\BA.WebUI\bin\Microsoft.Owin.Security.Google.xml
 C:\Dev\BlogApp\BA.WebUI\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Dev\BlogApp\BA.WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Dev\BlogApp\BA.WebUI\bin\BA.Infrastructure.Data.pdb
-C:\Dev\BlogApp\BA.WebUI\bin\BA.Domains.pdb
 C:\Dev\BlogApp\BA.WebUI\obj\Debug\BA.WebUI.csprojResolveAssemblyReference.cache
 C:\Dev\BlogApp\BA.WebUI\obj\Debug\BA.WebUI.dll
 C:\Dev\BlogApp\BA.WebUI\obj\Debug\BA.WebUI.pdb

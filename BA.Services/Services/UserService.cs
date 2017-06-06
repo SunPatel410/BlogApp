@@ -40,10 +40,10 @@ namespace BA.Services.Services
 
         public void UpdateUser(UserDto userDto)
         {
-            var user = _userRepository.Get(userDto.Id);
+            //var user = _userRepository.Get(userDto.Id);
 
-            user.Update(userDto.FirstName, userDto.LastName, userDto.Email);
-            _unitOfWork.Complete();
+            //user.Update(userDto.FirstName, userDto.LastName, userDto.Email);
+            //_unitOfWork.Complete();
         }
     }
 }

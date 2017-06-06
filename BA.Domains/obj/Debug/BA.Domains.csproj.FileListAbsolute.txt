@@ -1,9 +1,6 @@
+C:\Dev\BlogApp\BA.Domains\bin\Debug\BA.Domains.dll.config
 C:\Dev\BlogApp\BA.Domains\bin\Debug\BA.Domains.dll
 C:\Dev\BlogApp\BA.Domains\bin\Debug\BA.Domains.pdb
-C:\Dev\BlogApp\BA.Domains\obj\Debug\BA.Domains.dll
-C:\Dev\BlogApp\BA.Domains\obj\Debug\BA.Domains.pdb
-C:\Dev\BlogApp\BA.Domains\obj\Debug\BA.Domains.csprojResolveAssemblyReference.cache
-C:\Dev\BlogApp\BA.Domains\bin\Debug\BA.Domains.dll.config
 C:\Dev\BlogApp\BA.Domains\bin\Debug\EntityFramework.dll
 C:\Dev\BlogApp\BA.Domains\bin\Debug\EntityFramework.SqlServer.dll
 C:\Dev\BlogApp\BA.Domains\bin\Debug\Microsoft.AspNet.Identity.Core.dll
@@ -12,3 +9,6 @@ C:\Dev\BlogApp\BA.Domains\bin\Debug\EntityFramework.xml
 C:\Dev\BlogApp\BA.Domains\bin\Debug\EntityFramework.SqlServer.xml
 C:\Dev\BlogApp\BA.Domains\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Dev\BlogApp\BA.Domains\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Dev\BlogApp\BA.Domains\obj\Debug\BA.Domains.csprojResolveAssemblyReference.cache
+C:\Dev\BlogApp\BA.Domains\obj\Debug\BA.Domains.dll
+C:\Dev\BlogApp\BA.Domains\obj\Debug\BA.Domains.pdb
