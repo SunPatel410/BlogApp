@@ -9,7 +9,6 @@ namespace BA.WebUI.AutoMapper
         public ViewModelToDTOMapping()
         {
             CreateMap<CommentViewModel, CommentDto>();
-            //CreateMap<ApplicationUser, UserDto>();
             CreateMap<CategoryViewModel, CategoryDto>();
             CreateMap<CommentViewModel,CommentDto >();
             CreateMap<BlogViewModel, BlogDto>();

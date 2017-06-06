@@ -1,5 +1,4 @@
 ﻿using BA.Domains;
-using BA.WebUI.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
@@ -7,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using BA.WebUI.ViewModels;
 
 namespace BA.WebUI.Controllers
 {

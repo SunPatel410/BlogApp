@@ -9,10 +9,12 @@ namespace BA.Services.AutoMapper
         public DomainToDto()
         {
             CreateMap<Blog, BlogDto>();
+            CreateMap<Blog, BlogDetailsDto>();
+
             CreateMap<Category, CategoryDto>();
             CreateMap<Comment, CommentDto>();
             CreateMap<Like, LikeDto>();
-            CreateMap<ApplicationUser, UserDto>();
+            
         }
     }
 }

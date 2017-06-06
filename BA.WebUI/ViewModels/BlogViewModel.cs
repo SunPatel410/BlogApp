@@ -12,7 +12,8 @@ namespace BA.WebUI.ViewModels
         public Category Category { get;  set; }
         public string Description { get;  set; }
         public DateTime PostedDate { get;  set; }
-        public IList<Comment> Comments { get;  set; }
+        public IEnumerable<CommentViewModel> Comments { get;  set; }
         public int Likes { get; set; }
+        public string SearchTerm { get; set; }
     }
 }
