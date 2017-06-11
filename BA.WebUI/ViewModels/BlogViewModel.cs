@@ -1,19 +1,10 @@
-﻿using BA.Domains;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using BA.WebUI.ViewModels.BaseViewModels;
 
 namespace BA.WebUI.ViewModels
 {
-    public class BlogViewModel
+    public class BlogViewModel : BaseBlogViewModel
     {
-        public int Id { get; set; }
-        public ApplicationUser User { get; set; }
-        public string Title { get;  set; }
-        public Category Category { get;  set; }
-        public string Description { get;  set; }
-        public DateTime PostedDate { get;  set; }
         public IEnumerable<CommentViewModel> Comments { get;  set; }
-        public int Likes { get; set; }
-        public string SearchTerm { get; set; }
     }
 }

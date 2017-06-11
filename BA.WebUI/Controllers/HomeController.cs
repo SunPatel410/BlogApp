@@ -1,30 +1,30 @@
-﻿using System;
+﻿using AutoMapper;
+using BA.Services.Dtos;
+using BA.Services.Services;
+using BA.WebUI.ViewModels;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace BA.WebUI.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly BlogService _blogService;
+
+        public HomeController(BlogService blogService)
+        {
+            _blogService = blogService;
+        }
+
         public ActionResult Index()
         {
-            return View();
+            //var blogs = _blogService.GetBlogList();
+            //var viewModel = Mapper.Map<BlogViewModel>(blogs);
+
+            var viewModel = Mapper.Map<IEnumerable<BlogDetailsDto>, IEnumerable<BlogViewModel>>(_blogService.GetBlogList());
+
+            return View(viewModel);
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
     }
 }
