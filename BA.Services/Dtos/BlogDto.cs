@@ -9,7 +9,7 @@ namespace BA.Services.Dtos
         public int Id { get; set; }
         public ApplicationUser User { get; set; }
         public string Title { get; set; }
-        public Category Category { get; set; }
+        public CategoryDto Category { get; set; }
         public string Description { get; set; }
         public DateTime PostedDate { get; set; }
         public IList<CommentDto> Comments { get; set; }
@@ -19,7 +19,7 @@ namespace BA.Services.Dtos
         {
         }
 
-        public BlogDto(int id, ApplicationUser user, string title, Category category, string description,
+        public BlogDto(int id, ApplicationUser user, string title, CategoryDto category, string description,
             IList<CommentDto> comments, IList<LikeDto> likes)
         {
             Id = id;

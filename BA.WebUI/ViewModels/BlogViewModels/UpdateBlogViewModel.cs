@@ -1,4 +1,4 @@
-﻿namespace BA.WebUI.ViewModels
+﻿namespace BA.WebUI.ViewModels.BlogViewModels
 {
     public class UpdateBlogViewModel : CreateBlogViewModel
     {
