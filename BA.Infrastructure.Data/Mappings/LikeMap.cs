@@ -9,7 +9,7 @@ namespace BA.Infrastructure.Data.Mappings
         {
             HasKey(x => x.Id);
 
-            HasRequired(c => c.User);
+            Property(c => c.UserId);
         }
     }
 }

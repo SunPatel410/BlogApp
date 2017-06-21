@@ -9,7 +9,9 @@
         //protected const string UserName = "ObiOneHateDarth";
         //protected const string Password = "pass123";
 
-        protected const string UserName = "ObiOneHateDarth";
+        protected const string User = "ObiOneHateDarth";
+        protected const int UserId = 12;
+
 
         //category
         protected const string Name = "TestCategory";
@@ -23,7 +25,7 @@
         protected const string Description = "This is a a Blog Description";
 
         //protected User User  { get; set; }
-        protected ApplicationUser User  { get; set; }
+        //protected ApplicationUser User  { get; set; }
         protected Category Category { get; set; }
         protected Comment Comment { get; set; }
         protected Blog Blog { get; set; }

@@ -9,9 +9,8 @@ namespace BA.Infrastructure.Data.Mappings
         {
             HasKey(c => c.Id);
 
-            HasRequired(c => c.User)
-                .WithMany()
-                .WillCascadeOnDelete(false);
+            Property(c => c.User)
+                .HasMaxLength(30);
 
             Property(c => c.CommentDescription)
                 .IsRequired()

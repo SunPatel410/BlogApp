@@ -11,9 +11,5 @@ namespace BA.Infrastructure.Data.Repositories
         {
         }
 
-        //public IList<Blog> SearchBlogsByTheNameOfCurrentPresidentOfUSA(string name)
-        //{
-        //    return Find(p => p.Category.Name == "Obama Rules!").ToList();
-        //}
     }
 }

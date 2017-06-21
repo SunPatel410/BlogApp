@@ -32,6 +32,12 @@ namespace BA.Infrastructure.Data.Interfaces.Helpers
         /// </summary>
         /// <param name="entity"></param>
         void Add(T entity);
+        
+        /// <summary>
+        /// Updates entity
+        /// </summary>
+        /// <param name="entity"></param>
+        void Update(T entity);
 
         /// <summary>
         /// Removes entity from the database

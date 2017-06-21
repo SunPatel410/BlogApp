@@ -6,7 +6,7 @@ namespace BA.Domains
 {
     public class Comment : TEntity
     {
-        public ApplicationUser User { get; private set; }
+        public string User { get; private set; }
         public string CommentDescription { get; private set; }
         public IList<Like> Likes { get; }
 
@@ -15,7 +15,7 @@ namespace BA.Domains
             Likes = new List<Like>();
         }
 
-        public Comment(ApplicationUser user, string comment) : this()
+        public Comment(string user, string comment)
         {
             User = user;
             CommentDescription = comment;
@@ -44,10 +44,10 @@ namespace BA.Domains
             if (like == null)
                 throw new ArgumentNullException(nameof(like));
 
-            if (Likes.Any(x => x.User.Id == like.User.Id))
+            if (Likes.Any(x => x.UserId == like.UserId))
                 throw new InvalidOperationException("Cannot like twice");
 
-            if (like.User.Id == User.Id)
+            if (like.UserId == Id)
                 throw new InvalidOperationException("Cannot like your own comment");
 
             Likes.Add(like);
@@ -55,10 +55,10 @@ namespace BA.Domains
 
         public void RemoveLike(Like like)
         {
-            if (Likes.All(x => x.User.Id != like.User.Id))
+            if (Likes.All(x => x.UserId != like.UserId))
                 throw new InvalidOperationException(nameof(like));
 
-            var unLike = Likes.First(x => x.User.Id == like.User.Id);
+            var unLike = Likes.First(x => x.UserId == like.UserId);
 
             Likes.Remove(unLike);
         }

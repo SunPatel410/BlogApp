@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
 using BA.Services.Dtos;
 using BA.Services.Interfaces;
+using BA.Services.Requests;
+using BA.WebUI.ViewModels;
 using BA.WebUI.ViewModels.BlogViewModels;
-using Microsoft.AspNet.Identity;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
@@ -11,18 +12,20 @@ namespace BA.WebUI.Controllers
     public class HomeController : Controller
     {
         private readonly IBlogService _blogService;
+        private readonly ICategoryService _categoryService;
 
-        public HomeController(IBlogService blogService)
+        public HomeController(IBlogService blogService, ICategoryService categoryService)
         {
             _blogService = blogService;
+            _categoryService = categoryService;
         }
 
         public ActionResult Index()
         {
             var blogs = _blogService.GetBlogList();
-            var vm = Mapper.Map<IEnumerable<BlogDetailsViewModel>>(blogs);
+            var vm = Mapper.Map<IEnumerable<BlogViewModel>>(blogs);
 
-            return View("Blogs", vm);
+            return View(vm);
         }
 
         public ActionResult Details(int id)
@@ -32,68 +35,67 @@ namespace BA.WebUI.Controllers
             if (blog == null)
                 return HttpNotFound();
 
-            var vm = Mapper.Map<BlogViewModel>(blog);
-
-            if (User.Identity.IsAuthenticated)
-            {
-                var user = User.Identity.GetUserName();
-                vm.UserName = user;
-            }
+            var vm = Mapper.Map<BlogDetailsViewModel>(blog);
 
             return View(vm);
         }
 
-        // GET: BlogDetails/Create
+        [HttpGet]
+        [Authorize]
         public ActionResult Create()
         {
-            return View(new BlogViewModel());
+            var categories = _categoryService.Get();
+
+            var viewModel = new CreateBlogViewModel(categories);
+
+            return View(viewModel);
         }
 
-        // POST: BlogDetails/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CreateBlogViewModel createBlog)
+        [Authorize]
+        public ActionResult Create(CreateBlogViewModel viewModel)
         {
+            var categories = _categoryService.Get();
+
             if (!ModelState.IsValid)
-                return View(createBlog);
+            {
+                viewModel.Categories = Mapper.Map<IEnumerable<CategoryViewModel>>(categories);
+        
+                return View(viewModel);
+            }
 
-            var blogDetails = Mapper.Map<BlogDto>(createBlog);
-            _blogService.Create(blogDetails);
+            var request = Mapper.Map<CreateBlogRequest>(viewModel);
+            var blogId = _blogService.Create(request);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Details", new {id = blogId});
         }
 
+        [HttpGet]
         public ActionResult Edit(int id)
         {
             var blog = _blogService.Get(id);
 
-            var blogDetailsViewModel = Mapper.Map<BlogDto, UpdateBlogViewModel>(blog);
+            var viewModel = Mapper.Map<BlogDto, UpdateBlogViewModel>(blog);
 
-            if (blogDetailsViewModel == null)
-            {
+            if (viewModel == null)
                 return HttpNotFound();
-            }
 
-            return View(blogDetailsViewModel);
+            return View(viewModel);
         }
 
-        // POST: BlogDetails/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(UpdateBlogViewModel blogUpdate)
+        public ActionResult Edit(UpdateBlogViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
-                var blogDetails = Mapper.Map<BlogDto>(blogUpdate);
+                var blogDetails = Mapper.Map<BlogDto>(viewModel);
                 _blogService.Edit(blogDetails);
 
                 return RedirectToAction("Index");
             }
-            return View(blogUpdate);
+            return View(viewModel);
         }
 
         //do a method to add comments

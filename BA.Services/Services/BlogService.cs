@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using BA.Domains;
 using BA.Infrastructure.Data.Interfaces;
-using BA.Infrastructure.Data.Interfaces.Helpers;
 using BA.Services.Dtos;
 using BA.Services.Interfaces;
 using BA.Services.Requests;
@@ -14,12 +13,10 @@ namespace BA.Services.Services
     public class BlogService : IBlogService
     {
         private readonly IBlogRepository _blogRepository;
-        private readonly IUnitOfWork _unitOfWork;
 
-        public BlogService(IBlogRepository blogRepository, IUnitOfWork unitOfWork)
+        public BlogService(IBlogRepository blogRepository)
         {
             _blogRepository = blogRepository;
-            _unitOfWork = unitOfWork;
         }
 
 
@@ -29,12 +26,12 @@ namespace BA.Services.Services
             return Mapper.Map<BlogDto>(blog);
         }
 
-        public void Create(BlogDto blogDto)
+        public int Create(CreateBlogRequest request)
         {
-            var blog = Mapper.Map<Blog>(blogDto);
-
+            var blog = Mapper.Map<Blog>(request);
             _blogRepository.Add(blog);
-            _unitOfWork.Complete();
+
+            return blog.Id;
         }
 
         public void Edit(BlogDto blogDto)
@@ -42,7 +39,6 @@ namespace BA.Services.Services
             var blog = _blogRepository.Get(blogDto.Id);
 
             blog.Update(blog.Title, blog.Description, blog.Category);
-            _unitOfWork.Complete();
         }
 
         public void AddComment(Request<CommentDto> request)
@@ -55,7 +51,6 @@ namespace BA.Services.Services
             var commentDto = Mapper.Map<Comment>(request.Details);
 
             comment.AddComment(commentDto);
-            _unitOfWork.Complete();
         }
 
         public void RemoveComment(Request<CommentDto> request)
@@ -63,8 +58,7 @@ namespace BA.Services.Services
             var comment = _blogRepository.Get(x => x.Id == request.EntityId).FirstOrDefault();
 
             _blogRepository.Remove(comment);
-
-            _unitOfWork.Complete();
+           
         }
 
         public void AddLike(Request<LikeDto> request)
@@ -78,7 +72,6 @@ namespace BA.Services.Services
 
             blog.AddLike(like);
 
-            _unitOfWork.Complete();
         }
 
         public void RemoveLike(Request<LikeDto> request)
@@ -91,8 +84,6 @@ namespace BA.Services.Services
             var like = Mapper.Map<Like>(request.Details);
 
             blog.RemoveLike(like);
-
-            _unitOfWork.Complete();
         }
 
         public IEnumerable<BlogDto> Search(string query)

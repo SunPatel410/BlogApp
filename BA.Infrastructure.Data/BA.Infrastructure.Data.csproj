@@ -88,12 +88,10 @@
     <Compile Include="Interfaces\IBlogRepository.cs" />
     <Compile Include="Interfaces\ICategoryRepository.cs" />
     <Compile Include="Interfaces\ICommentRepository.cs" />
-    <Compile Include="Interfaces\IUserRepository.cs" />
     <Compile Include="Mappings\BlogMap.cs" />
     <Compile Include="Mappings\CategoryMap.cs" />
     <Compile Include="Mappings\CommentMap.cs" />
     <Compile Include="Mappings\LikeMap.cs" />
-    <Compile Include="Mappings\UserMap.cs" />
     <Compile Include="Migrations\201705312117513_changedDbEntites.cs" />
     <Compile Include="Migrations\201705312117513_changedDbEntites.Designer.cs">
       <DependentUpon>201705312117513_changedDbEntites.cs</DependentUpon>
@@ -110,6 +108,14 @@
     <Compile Include="Migrations\201706061430012_changesToApplicationUser.Designer.cs">
       <DependentUpon>201706061430012_changesToApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706181928272_updatingblogtable.cs" />
+    <Compile Include="Migrations\201706181928272_updatingblogtable.Designer.cs">
+      <DependentUpon>201706181928272_updatingblogtable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706210825082_updatedUserDetails.cs" />
+    <Compile Include="Migrations\201706210825082_updatedUserDetails.Designer.cs">
+      <DependentUpon>201706210825082_updatedUserDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Plumbings\DataPlumbings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,7 +124,6 @@
     <Compile Include="Repositories\CommentRepository.cs" />
     <Compile Include="Repositories\Helpers\Repository.cs" />
     <Compile Include="Repositories\Helpers\UnitOfWork.cs" />
-    <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BA.Domains\BA.Domains.csproj">
@@ -145,6 +150,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706061430012_changesToApplicationUser.resx">
       <DependentUpon>201706061430012_changesToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706181928272_updatingblogtable.resx">
+      <DependentUpon>201706181928272_updatingblogtable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706210825082_updatedUserDetails.resx">
+      <DependentUpon>201706210825082_updatedUserDetails.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

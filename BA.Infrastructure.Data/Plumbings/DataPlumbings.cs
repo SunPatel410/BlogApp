@@ -13,7 +13,6 @@ namespace BA.Infrastructure.Data.Plumbings
             kernel.Bind<IBlogRepository>().To<BlogRepository>();
             kernel.Bind<ICommentRepository>().To<CommentRepository>();
             kernel.Bind<ICategoryRepository>().To<CategoryRepository>();
-            //kernel.Bind<IUserRepository>().To<UserRepository>();
             kernel.Bind<IUnitOfWork>().To<UnitOfWork>();   
         }
     }

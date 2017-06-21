@@ -91,11 +91,11 @@
     <Compile Include="Interfaces\IUserService.cs" />
     <Compile Include="Plumbings\ServicesPlumbing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\CreateBlogRequest.cs" />
     <Compile Include="Requests\Request.cs" />
     <Compile Include="Services\BlogService.cs" />
     <Compile Include="Services\CategoryService.cs" />
     <Compile Include="Services\CommentService.cs" />
-    <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BA.Domains\BA.Domains.csproj">

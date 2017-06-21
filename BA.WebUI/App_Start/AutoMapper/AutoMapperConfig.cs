@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BA.Services.AutoMapper;
 
 namespace BA.WebUI.AutoMapper
 {
@@ -8,6 +9,7 @@ namespace BA.WebUI.AutoMapper
         {
             Mapper.Initialize(x =>
             {
+                x.AddProfile<DomainToDto>();
                 x.AddProfile<DTOtoViewModelMapping>();
                 x.AddProfile<ViewModelToDTOMapping>();
             });

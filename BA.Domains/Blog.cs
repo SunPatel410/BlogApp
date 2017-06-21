@@ -6,21 +6,21 @@ namespace BA.Domains
 {
     public class Blog : TEntity
     {
-        public ApplicationUser User { get; private set; }
+        public string User { get; private set; }
         public string Title { get; private set; }
+        public int CategoryId { get; set; }
         public Category Category { get; private set; }
         public string Description { get; private set; }
         public DateTime PostedDate { get; private set; }
         public IList<Comment> Comments { get; private set; }
         public IList<Like> Likes { get; set; }
-        public bool Hide { get; private set; }
 
         protected Blog()
         {
             
         }
 
-        public Blog(ApplicationUser user, string title, Category category, string description)
+        public Blog(string user, string title, Category category, string description)
         {
             User = user;
             Title = title;
@@ -74,21 +74,21 @@ namespace BA.Domains
             if (like == null)
                 throw new ArgumentNullException(nameof(like));
 
-            if (Likes.Any(x => x.User.Id == like.User.Id))
+            if (Likes.Any(x => x.UserId == like.UserId))
                 throw new InvalidOperationException("Cannot like twice");
 
-            if (like.User.Id == User.Id)
-                throw new InvalidOperationException("Cannot like your own comment");
+            if (like.UserId == Id)
+                throw new InvalidOperationException("Cannot like your own blog");
 
             Likes.Add(like);
         }
 
         public void RemoveLike(Like like)
         {
-            if (Likes.All(x => x.User.Id != like.User.Id))
+            if (Likes.All(x => x.UserId != like.UserId))
                 throw new InvalidOperationException(nameof(like));
 
-            var unLike = Likes.First(x => x.User.Id == like.User.Id);
+            var unLike = Likes.First(x => x.UserId == like.UserId);
 
             Likes.Remove(unLike);
         }

@@ -9,9 +9,11 @@ namespace BA.Infrastructure.Data.Mappings
         {
             HasKey(b => b.Id);
 
-            HasRequired(b => b.User)
-                .WithMany()
-                .WillCascadeOnDelete(false);
+            Property(g => g.CategoryId)
+                .IsRequired();
+
+            Property(b => b.User)
+                .HasMaxLength(30);
 
             Property(b => b.Title)
                 .IsRequired()
@@ -33,9 +35,6 @@ namespace BA.Infrastructure.Data.Mappings
             HasMany(p => p.Likes)
                 .WithRequired()
                 .WillCascadeOnDelete(false);
-
-            Property(b => b.Hide)
-                .IsRequired();
         }
     }
 }

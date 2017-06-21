@@ -26,7 +26,7 @@ namespace BA.Domains.Tests
         {
             var blog = Blog;
 
-            Assert.AreEqual(User.UserName, blog.User.UserName);
+            Assert.AreEqual(User, blog.User);
             Assert.AreEqual(Title, blog.Title);
             Assert.AreEqual(Description, blog.Description);
             Assert.AreEqual(Category, blog.Category);

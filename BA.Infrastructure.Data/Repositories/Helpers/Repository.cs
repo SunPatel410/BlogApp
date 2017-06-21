@@ -11,36 +11,44 @@ namespace BA.Infrastructure.Data.Repositories.Helpers
 {
     public abstract class Repository<T> : IRepository<T> where T : TEntity
     {
-        private readonly IDbSet<T> _set;
+        protected BlogDbContext _context;
+        protected readonly IDbSet<T> _dbset;
+
 
         protected Repository(BlogDbContext context)
         {
-            _set = context.Set<T>();
+            _context = context;
+            _dbset = context.Set<T>();
         }
 
         public T Get(int id)
         {
-            return _set.FirstOrDefault(p => p.Id == id);
+            return _dbset.FirstOrDefault(p => p.Id == id);
         }
 
         public IEnumerable<T> Get()
         {
-            return _set.AsNoTracking().ToList();
+            return _dbset.AsNoTracking().ToList();
         }
 
         public IEnumerable<T> Get(Expression<Func<T, bool>> predicate)
         {
-            return _set.AsNoTracking().Where(predicate);
+            return _dbset.AsNoTracking().Where(predicate);
         }
 
         public void Add(T entity)
         {
-            _set.Add(entity);
+            _dbset.Add(entity);
+        }
+
+        public void Update(T entity)
+        {
+            _context.Entry(entity).State = EntityState.Modified;
         }
 
         public void Remove(T entity)
         {
-            _set.Remove(entity);
+            _dbset.Remove(entity);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace BA.Domains.Tests
         {
             var comment = Comment;
 
-            Assert.AreEqual(User.UserName, comment.User.UserName);
+            Assert.AreEqual(UserId, comment.Id);
             Assert.AreEqual(CommentDescription, comment.CommentDescription);
         }
 
@@ -37,7 +37,7 @@ namespace BA.Domains.Tests
         [Test]
         public void AddLike_Success()
         {
-            var like = new Like(User);
+            var like = new Like(UserId);
 
             Comment.AddLike(like);
 
@@ -53,7 +53,7 @@ namespace BA.Domains.Tests
         [Test]
         public void AddLike_CannotLikeTwice()
         {
-            var like = new Like(User);
+            var like = new Like(UserId);
 
             Comment.AddLike(like);
 
@@ -64,7 +64,7 @@ namespace BA.Domains.Tests
         public void AddLike_CannotLikeOwnComment()
         {
             var comment = new Comment(User, "Test");
-            var like = new Like(User);
+            var like = new Like(UserId);
 
             Assert.Throws<InvalidOperationException>(delegate { comment.AddLike(like);});
         }
@@ -72,7 +72,7 @@ namespace BA.Domains.Tests
         [Test]
         public void RemoveLike()
         {
-            var like = new Like(User);
+            var like = new Like(UserId);
 
             Comment.AddLike(like);
 

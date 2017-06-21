@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BA.Services.Dtos;
+using BA.Services.Requests;
 using BA.WebUI.ViewModels;
 using BA.WebUI.ViewModels.BlogViewModels;
 
@@ -13,6 +14,9 @@ namespace BA.WebUI.AutoMapper
             CreateMap<BlogDetailsViewModel, BlogDetailsDto>();
             CreateMap<CommentViewModel, CommentDto>();
             CreateMap<CategoryViewModel, CategoryDto>();
+
+            CreateMap<CreateBlogViewModel, CreateBlogRequest>();
+
         }
     }
 }

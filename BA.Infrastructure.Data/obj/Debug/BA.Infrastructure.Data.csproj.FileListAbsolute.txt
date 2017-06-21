@@ -28,3 +28,5 @@ C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.csproj.Ge
 C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.dll
 C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.pdb
 C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.Migrations.changesToApplicationUser.resources
+C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.Migrations.updatingblogtable.resources
+C:\Dev\BlogApp\BA.Infrastructure.Data\obj\Debug\BA.Infrastructure.Data.Migrations.updatedUserDetails.resources
