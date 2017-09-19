@@ -14,7 +14,7 @@ namespace BA.Services.Interfaces
         void AddLike(Request<LikeDto> request);
         void RemoveLike(Request<LikeDto> request);
         IEnumerable<BlogDto> Search(string query);
-        IEnumerable<BlogDetailsDto> GetBlogList();
+        IEnumerable<BlogDto> GetBlogList();
 
     }
 }

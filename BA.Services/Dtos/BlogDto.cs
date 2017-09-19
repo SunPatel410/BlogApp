@@ -1,5 +1,4 @@
-﻿using BA.Domains;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace BA.Services.Dtos
@@ -7,7 +6,7 @@ namespace BA.Services.Dtos
     public class BlogDto
     {
         public int Id { get; set; }
-        public ApplicationUser User { get; set; }
+        public string User { get; set; }
         public string Title { get; set; }
         public int CategoryId { get; set; }
         public CategoryDto Category { get; set; }
@@ -20,7 +19,7 @@ namespace BA.Services.Dtos
         {
         }
 
-        public BlogDto(int id, ApplicationUser user, string title, CategoryDto category, string description,
+        public BlogDto(int id, string user, string title, CategoryDto category, string description,
             IList<CommentDto> comments, IList<LikeDto> likes)
         {
             Id = id;

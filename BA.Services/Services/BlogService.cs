@@ -37,8 +37,7 @@ namespace BA.Services.Services
         public void Edit(BlogDto blogDto)
         {
             var blog = _blogRepository.Get(blogDto.Id);
-
-            blog.Update(blog.Title, blog.Description, blog.Category);
+            _blogRepository.Update(blog);
         }
 
         public void AddComment(Request<CommentDto> request)
@@ -58,7 +57,6 @@ namespace BA.Services.Services
             var comment = _blogRepository.Get(x => x.Id == request.EntityId).FirstOrDefault();
 
             _blogRepository.Remove(comment);
-           
         }
 
         public void AddLike(Request<LikeDto> request)
@@ -71,7 +69,6 @@ namespace BA.Services.Services
             var like = Mapper.Map<Like>(request.Details);
 
             blog.AddLike(like);
-
         }
 
         public void RemoveLike(Request<LikeDto> request)
@@ -93,11 +90,11 @@ namespace BA.Services.Services
             return Mapper.Map<IEnumerable<BlogDto>>(search);
         }
 
-        public IEnumerable<BlogDetailsDto> GetBlogList()
+        public IEnumerable<BlogDto> GetBlogList()
         {
             var blogs = _blogRepository.Get();
 
-            return Mapper.Map<IEnumerable<BlogDetailsDto>>(blogs);
+            return Mapper.Map<IEnumerable<BlogDto>>(blogs);
         }
     }
 }

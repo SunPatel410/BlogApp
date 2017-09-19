@@ -21,8 +21,9 @@ namespace BA.Services.Services
         public void Update(CommentDto commentDto)
         {
             var comment = _commentRepository.Get(commentDto.Id);
-
-            comment.Update(commentDto.CommentDescription);
+            _commentRepository.Update(comment);
+            _commentRepository.Save();
+            //comment.Update(commentDto.CommentDescription);
         }
 
         public void AddLike(Request<LikeDto> request)
@@ -31,11 +32,11 @@ namespace BA.Services.Services
 
             if (comment == null)
                 throw new ArgumentNullException(nameof(comment));
-            
+
             var like = Mapper.Map<Like>(request.Details);
 
             comment.AddLike(like);
-
+            _commentRepository.Save();
         }
 
         public void RemoveLike(Request<LikeDto> request)
@@ -48,7 +49,7 @@ namespace BA.Services.Services
             var like = Mapper.Map<Like>(request.Details);
 
             comment.RemoveLike(like);
-
+            _commentRepository.Save();
         }
     }
 }

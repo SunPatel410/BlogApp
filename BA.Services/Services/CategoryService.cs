@@ -28,7 +28,6 @@ namespace BA.Services.Services
             var category = Mapper.Map<Category>(categoryDto);
 
             _categoryRepository.Add(category);
-
         }
 
         public void RemoveCategory(CategoryDto categoryDto)
@@ -36,14 +35,12 @@ namespace BA.Services.Services
             var category = _categoryRepository.Get(categoryDto.Id);
 
             _categoryRepository.Remove(category);
-
         }
 
         public void UpdateCategory(CategoryDto categoryDto)
         {
             var category = _categoryRepository.Get(categoryDto.Id);
-
-            category.Update(categoryDto.Name, categoryDto.CategoryDescription);
+            _categoryRepository.Update(category);
         }
     }
 }

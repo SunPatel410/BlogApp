@@ -44,5 +44,9 @@ namespace BA.Infrastructure.Data.Interfaces.Helpers
         /// </summary>
         /// <param name="entity"></param>
         void Remove(T entity);
+        /// <summary>
+        /// Save Changes to Db
+        /// </summary>
+        void Save();
     }
 }
