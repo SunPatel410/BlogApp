@@ -12,7 +12,6 @@ namespace BA.Services.AutoMapper
             CreateMap<Blog, BlogDto>();
             CreateMap<Blog, BlogDetailsDto>();
             CreateMap<Blog, CreateBlogRequest>().ReverseMap();
-            CreateMap<Blog, CreateBlogRequest>();
 
             CreateMap<Category, CategoryDto>();
             CreateMap<Comment, CommentDto>();

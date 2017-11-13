@@ -14,6 +14,7 @@ namespace BA.WebUI.AutoMapper
             CreateMap<BlogDetailsDto, BlogDetailsViewModel>();
             CreateMap<CommentDto, CommentViewModel>();
             CreateMap<CategoryDto, CategoryViewModel>();
+            CreateMap<BlogDto, UpdateBlogViewModel>();
         }
     }
     }
